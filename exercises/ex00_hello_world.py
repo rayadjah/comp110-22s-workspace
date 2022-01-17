@@ -1,3 +1,3 @@
 print("Hello again, world.")
 
-author="730397634"
+__author__ = "730397634"
