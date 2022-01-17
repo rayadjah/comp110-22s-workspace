@@ -1,3 +1,3 @@
-print("Hello, world")
+print("Hello, world.")
 
-_author_="730397634"
+_author_ = "730397634"
