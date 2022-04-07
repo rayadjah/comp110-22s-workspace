@@ -46,6 +46,7 @@ def emojified(searched_string: str, expected_string: str) -> str:
 
 
 def input_guess(expected_length: int) -> str:
+    """Making sure the guess is the right length."""
     print("Enter a " + str(expected_length) + " character word: ")
     guess = input()
     while len(guess) != expected_length:
@@ -55,6 +56,7 @@ def input_guess(expected_length: int) -> str:
 
 
 def main() -> None:
+    """The entrypoint of the program and main game loop."""
     correct = "codes"
     turns_spent = 1
     win_game = False
@@ -62,7 +64,8 @@ def main() -> None:
     while turns_spent <= 6 and win_game is False:
         print("=== Turn " + str(turns_spent) + "/6 ===")
         guess = input_guess(5)
-        print(emojified(correct, guess))
+        emojis = emojified(correct, guess)
+        print(emojis)
         if guess == correct:
             win_game = True
         else:
